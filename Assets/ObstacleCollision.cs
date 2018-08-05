@@ -14,7 +14,13 @@ public class ObstacleCollision : MonoBehaviour {
             Debug.Log("HIT");
             GetComponent<Collider>().enabled = false;
         }
-	}
+        if (hit.gameObject.tag == "PewPew" && Destroyable == true)
+        {
+            Debug.Log("Hit by Pew Pew");
+            GameObject Explosion = Instantiate(BoomBoom, transform.position, transform.rotation);
+            Destroy(gameObject.transform.parent.gameObject);
+        }
+    }
 
     void OnTriggerEnter(Collider hit)
     {
@@ -25,12 +31,7 @@ public class ObstacleCollision : MonoBehaviour {
             GetComponent<Collider>().enabled = false;
         }
 
-        if (hit.gameObject.tag == "PewPew" && Destroyable == true)
-        {
-            Debug.Log("Hit by Pew Pew");
-            GameObject Explosion = Instantiate(BoomBoom, transform.position, transform.rotation);
-            Destroy(gameObject.transform.parent.gameObject);
-        }
+        
 
     }
 

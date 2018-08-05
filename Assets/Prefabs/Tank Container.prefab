@@ -582,7 +582,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1445884996582554}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.205, z: 16.86}
+  m_LocalPosition: {x: -2.5664604, y: -4.2191353, z: 32.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4250060782769684}
@@ -1313,6 +1313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartingVector: {x: 0, y: -0.205, z: 0}
+  SpeedMultiplier: 1
 --- !u!114 &114271586827078408
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1363,5 +1364,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7345c556ab3c71d4a98249ca9a9f8a3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoomBoom: {fileID: 0}
+  BoomBoom: {fileID: 1772603276323792, guid: 20c18964874cc3a42afa863737d18212, type: 2}
   Destroyable: 1
