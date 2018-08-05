@@ -17,7 +17,7 @@ public class SkyScroll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        material.mainTextureOffset = new Vector2(material.mainTextureOffset.x + Speed.speed.x * Time.deltaTime / 32,
+        material.mainTextureOffset = new Vector2(material.mainTextureOffset.x + Speed.speed.x * Time.deltaTime / 32 * -1,
             0);
     }
 }
