@@ -7,9 +7,9 @@ public class Obstacle : MonoBehaviour {
     private List<Material> materials;
     private List<Color> colors;
     public Vector3 StartingVector;
+    public float SpeedMultiplier = 1.0f;
 
     private float startZ;
-
     // Use this for initialization
     void Start () {
         groundScroll = GameObject.Find("Ground").GetComponent<ScrollTexture>();
@@ -41,7 +41,7 @@ public class Obstacle : MonoBehaviour {
         transform.Translate(
             groundScroll.speed.x * Time.deltaTime * 1.55f, 
             0, 
-            groundScroll.speed.y * Time.deltaTime * 1.55f);
+            groundScroll.speed.y * Time.deltaTime * 1.55f * SpeedMultiplier);
 
         float a = 0.2f;
         float deltaZ = Mathf.Abs(startZ - transform.position.z);
