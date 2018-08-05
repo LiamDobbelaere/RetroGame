@@ -9,7 +9,7 @@ QualitySettings:
   - serializedVersion: 2
     name: Retro
     pixelLightCount: 0
-    shadows: 0
+    shadows: 1
     shadowResolution: 0
     shadowProjection: 1
     shadowCascades: 1
@@ -29,6 +29,12 @@ QualitySettings:
     vSyncCount: 0
     lodBias: 0.3
     maximumLODLevel: 0
+    streamingMipmapsActive: 0
+    streamingMipmapsAddAllCameras: 1
+    streamingMipmapsMemoryBudget: 512
+    streamingMipmapsRenderersPerFrame: 512
+    streamingMipmapsMaxLevelReduction: 2
+    streamingMipmapsMaxFileIORequests: 1024
     particleRaycastBudget: 4
     asyncUploadTimeSlice: 2
     asyncUploadBufferSize: 4

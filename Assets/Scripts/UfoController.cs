@@ -8,6 +8,7 @@ public class UfoController : MonoBehaviour
 
     private Rigidbody rb;
     private ScrollTexture groundScroll;
+    public bool CanControl = true;
 
     // Use this for initialization
     void Start()
@@ -19,18 +20,21 @@ public class UfoController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.MovePosition(transform.position + new Vector3(Input.GetAxisRaw("Horizontal") * speed * Time.deltaTime,
-            Input.GetAxisRaw("Vertical") * speed * Time.deltaTime, 0.0f));
-
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -1.5f, 1.5f), Mathf.Clamp(transform.position.y, -0.61f, 1.8f), transform.position.z);
-
-        if (Mathf.Abs(transform.position.x) > 0.5f)
+        if (CanControl == true)
         {
-            groundScroll.speed.x = -transform.position.x * 1.5f;
-        }
-        else
-        {
-            groundScroll.speed.x = 0f;
+            rb.MovePosition(transform.position + new Vector3(Input.GetAxisRaw("Horizontal") * speed * Time.deltaTime,
+                Input.GetAxisRaw("Vertical") * speed * Time.deltaTime, 0.0f));
+
+            transform.position = new Vector3(Mathf.Clamp(transform.position.x, -1.5f, 1.5f), Mathf.Clamp(transform.position.y, -0.61f, 1.8f), transform.position.z);
+
+            if (Mathf.Abs(transform.position.x) > 0.5f)
+            {
+                groundScroll.speed.x = -transform.position.x * 1.5f;
+            }
+            else
+            {
+                groundScroll.speed.x = 0f;
+            }
         }
     }
 }
