@@ -17,14 +17,14 @@ public class ObstacleCollision : MonoBehaviour {
         if (hit.gameObject.tag == "PewPew" && Destroyable == true)
         {
             Debug.Log("Hit by Pew Pew");
-            GameObject Explosion = Instantiate(BoomBoom, transform.position, transform.rotation);
+            GameObject Explosion = Instantiate(BoomBoom, transform.position, transform.parent.rotation);
             Destroy(gameObject.transform.parent.gameObject);
         }
     }
 
-    void OnTriggerEnter(Collider hit)
+    void OnTriggerEnter(Collider hitit)
     {
-        if (hit.gameObject.tag == "Player")
+        if (hitit.gameObject.tag == "Player")
         {
             GameObject.Find("Health").GetComponent<Slider>().value -= 1;
             Debug.Log("HIT");

@@ -10,6 +10,8 @@ public class Manager : MonoBehaviour {
     private ScrollTexture groundScroll;
     public AudioClip[] AudioData;
     public GameObject Shadow;
+    public Text ScoreBox;
+    public int Score;
 
     public bool Destroyed = false;
 	// Use this for initialization

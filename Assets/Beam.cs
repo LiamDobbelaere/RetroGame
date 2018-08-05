@@ -14,7 +14,7 @@ public class Beam : MonoBehaviour {
 	
 	// Update is called once per frame
 	void OnCollisionEnter (Collision hit) {
-        if (hit.gameObject.tag != "Player" || hit.gameObject.tag != "PewPew")
+        if (hit.gameObject.tag != "Player" && hit.gameObject.tag != "PewPew")
         {
             Destroy(gameObject);
         }
