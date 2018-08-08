@@ -29,7 +29,7 @@ public class Generator : MonoBehaviour {
         Spawn = true;
 
         int binary = Random.Range(0, 2);
-
+        binary = 1;
             if (binary == 0)
             {
                 GameObject Enemy = Instantiate(Enemies[Random.Range(0, Enemies.Length)], transform.position, transform.rotation);
@@ -37,7 +37,7 @@ public class Generator : MonoBehaviour {
 
             if (binary == 1)
             {
-                GameObject Obstacle = Instantiate(Obstacles[Random.Range(0, Obstacles.Length)], transform.position, transform.rotation);
+                GameObject Obstacle = Instantiate(Obstacles[0/*Random.Range(0, Obstacles.Length)*/], transform.position, transform.rotation);
             }
 
         yield return new WaitForSeconds(Rate);
@@ -50,4 +50,4 @@ public class Generator : MonoBehaviour {
         yield return new WaitForSeconds(5);
         Spawn = false;
     }
-    }
+}

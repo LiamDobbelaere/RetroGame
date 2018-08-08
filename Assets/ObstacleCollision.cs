@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -26,6 +27,8 @@ public class ObstacleCollision : MonoBehaviour {
     {
         if (hitit.gameObject.tag == "Player")
         {
+            Debug.Log("OnTriggaEnte");
+
             GameObject.Find("Health").GetComponent<Slider>().value -= 1;
             Debug.Log("HIT");
             GetComponent<Collider>().enabled = false;

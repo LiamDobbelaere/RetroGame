@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4156388604003514}
   - component: {fileID: 33612504644306818}
   - component: {fileID: 23825225314840052}
-  - component: {fileID: 65371129909922152}
   m_Layer: 0
   m_Name: Sphere.001
   m_TagString: Untagged
@@ -68,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1586423747610308}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.5470967, y: -4.5902767, z: 32.87}
+  m_LocalPosition: {x: -9.437595, y: -0.30936217, z: -2.8262239}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 4156388604003514}
@@ -142,20 +141,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65371129909922152
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1550835100889432}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.017320508, y: 0.017320506, z: 0.01999999}
-  m_Center: {x: -0.000000059604645, y: -9.3132235e-10, z: -0.0000000018626447}
 --- !u!114 &114441729512378398
 MonoBehaviour:
   m_ObjectHideFlags: 1
