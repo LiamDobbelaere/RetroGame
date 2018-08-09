@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4305855843302150}
   - component: {fileID: 65958177316428848}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject
   m_TagString: PewPew
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 136984987641625370}
   - component: {fileID: 54197351257234360}
   - component: {fileID: 114586596888551530}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: New Laser
   m_TagString: PewPew
   m_Icon: {fileID: 0}

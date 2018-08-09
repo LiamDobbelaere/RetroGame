@@ -9,13 +9,13 @@ public class ObstacleCollision : MonoBehaviour {
     public bool Destroyable = false;
 	// Use this for initialization
 	void OnCollisionEnter (Collision hit) {
-		if (hit.gameObject.tag == "Player")
+		if (hit.gameObject.CompareTag("Player"))
         {
             GameObject.Find("Health").GetComponent<Slider>().value -= 1;
             Debug.Log("HIT");
             GetComponent<Collider>().enabled = false;
         }
-        if (hit.gameObject.tag == "PewPew" && Destroyable == true)
+        if (hit.gameObject.CompareTag("PewPew") && Destroyable == true)
         {
             Debug.Log("Hit by Pew Pew");
             GameObject Explosion = Instantiate(BoomBoom, transform.position, transform.parent.rotation);
@@ -25,17 +25,11 @@ public class ObstacleCollision : MonoBehaviour {
 
     void OnTriggerEnter(Collider hitit)
     {
-        if (hitit.gameObject.tag == "Player")
+        if (hitit.gameObject.CompareTag("Player"))
         {
-            Debug.Log("OnTriggaEnte");
-
             GameObject.Find("Health").GetComponent<Slider>().value -= 1;
-            Debug.Log("HIT");
             GetComponent<Collider>().enabled = false;
         }
-
-        
-
     }
 
     // Update is called once per frame

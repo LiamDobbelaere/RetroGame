@@ -5,7 +5,7 @@ using UnityEngine;
 public class SkyScroll : MonoBehaviour
 {
     public ScrollTexture Speed;
-
+    public float scaleFactor;
     private Material material;
 
     // Use this for initialization
@@ -17,7 +17,7 @@ public class SkyScroll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        material.mainTextureOffset = new Vector2(material.mainTextureOffset.x + Speed.speed.x * Time.deltaTime / 32 * -1,
+        material.mainTextureOffset = new Vector2(material.mainTextureOffset.x + Speed.speed.x * Time.deltaTime / 32 * -1 * scaleFactor,
             0);
     }
 }
